@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.List;
 import solutions.Solution1249;
 import solutions.Solution200;
+import solutions.Solution994;
 
 @SuppressWarnings("unused")
 public class Main {
@@ -9,7 +10,29 @@ public class Main {
     static Solution solution = new Solution();
 
     public static void main(String[] args) {
-        testNumIslands();
+        testOrangesRotting();
+    }
+
+    private static void testOrangesRotting(){
+        Solution994 solution = new Solution994();
+
+        // int[][] grid = {
+        //     {2, 1, 1},
+        //     {1, 1, 0},
+        //     {0, 1, 1}
+        // };
+        // int[][] grid = {
+        //     {2, 1, 1},
+        //     {0, 1, 1},
+        //     {1, 0, 1}
+        // };
+        int[][] grid = {
+            {1, 2},
+        };
+
+        var result = solution.orangesRotting(grid);
+
+        System.out.println(result);
     }
 
     private static void testNumIslands(){
