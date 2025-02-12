@@ -1,6 +1,7 @@
 package solutions;
 
 // https://leetcode.com/problems/add-two-numbers/
+@SuppressWarnings("unused")
 public class Solution2 {
 
     public ListNode addListNode(ListNode head, int value) {

@@ -1,6 +1,7 @@
 package solutions;
 
 // https://leetcode.com/problems/reverse-linked-list/submissions/1539241988/
+@SuppressWarnings("unused")
 public class Solution206 {
 
     public ListNode reverseList(ListNode head) {

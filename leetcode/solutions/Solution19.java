@@ -1,6 +1,7 @@
 package solutions;
 
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/1539268037/
+@SuppressWarnings("unused")
 public class Solution19 {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {

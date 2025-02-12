@@ -2,6 +2,7 @@ package montyhall;
 
 import java.util.Random;
 
+@SuppressWarnings("unused")
 public class Game {
 
     static int goat = 0;
