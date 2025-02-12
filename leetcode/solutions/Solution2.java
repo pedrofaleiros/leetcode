@@ -3,38 +3,41 @@ package solutions;
 // https://leetcode.com/problems/add-two-numbers/
 public class Solution2 {
 
-    // TODO: acabar
+    public ListNode addListNode(ListNode head, int value) {
+        if (head == null) {
+            return new ListNode(value);
+        }
+
+        ListNode curr = head;
+
+        while (curr.next != null) {
+            curr = curr.next;
+        }
+
+        curr.next = new ListNode(value);
+
+        return head;
+    }
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int s1 = 0;
-        int s2 = 0;
+        ListNode head = null;
+        int rest = 0;
 
-        int pow = 0;
+        while (l1 != null || l2 != null || rest != 0) {
+            int v1 = (l1 != null) ? l1.val : 0;
+            int v2 = (l2 != null) ? l2.val : 0;
+            int sum = v1 + v2 + rest;
 
-        ListNode aux = l1;
-        while (aux != null) {
-            int value = (int) Math.pow(10, pow);
+            rest = sum / 10;
+            sum = sum % 10;
 
-            s1 += value * aux.val;
-            pow++;
+            head = addListNode(head, sum);
 
-            aux = aux.next;
+            l1 = (l1 != null) ? l1.next : null;
+            l2 = (l2 != null) ? l2.next : null;
         }
 
-        pow = 0;
-        aux = l2;
-        while (aux != null) {
-            int value = (int) Math.pow(10, pow);
-
-            s2 += value * aux.val;
-            pow++;
-
-            aux = aux.next;
-        }
-
-        System.out.println(s1);
-        System.out.println(s2);
-
-        return null;
+        return head;
     }
 
     public static void main(String[] args) {
